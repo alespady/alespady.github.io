@@ -1,12 +1,16 @@
-Finished Pages
+# English 12 Research Project
 
-Main Page
-Pros and Cons for Electoral College
-NPVIC brief
+Checklist for what needs to be finished
+
+## Finished
+
+-NPVIC Brief
+-Main Page
+-Pros and Cons for Electoral College
 
 
-Still needed
+## Needed
 
-Pros and Cons for NPVIC
-Electoral College briefing
-
+-Electoral College Brief
+-Pros and Cons for NPVIC
+-Citations page
