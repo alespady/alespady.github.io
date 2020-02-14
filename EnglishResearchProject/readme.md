@@ -7,11 +7,11 @@ Checklist for what needs to be finished
 - NPVIC Brief
 - Main Page
 - Pros and Cons for Electoral College
-
+- Sitemap page
+- Citations page
 
 ## Needed
 
 - Electoral College Brief
 - Pros and Cons for NPVIC
-- Citations page
-- Sitemap page
+
