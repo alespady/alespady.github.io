@@ -1,46 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport" />
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Real Time IDE</title>
+    <script type="text/javascript">
 
-    <!-- section:seometa -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Discord" />
-    <meta property="og:title" content="Discord - Free voice and text chat for gamers" />
-    <meta
-      property="og:description"
-      content="Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server now!"
-    /><meta property="og:image" content="https://discordapp.com/assets/ee7c382d9257652a88c8f7b7f22a994d.png" />    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@discordapp" />
-    <meta name="twitter:creator" content="@discordapp" />
-    <!-- endsection -->
+      function refresh(){
+        var textContent = document.getElementById('editor-textarea').value;
+        document.getElementById('viewer').srcdoc = textContent;
 
-    <link
-      rel="chrome-webstore-item"
-      href="https://chrome.google.com/webstore/detail/lcbhdgefieegnkbopmgklhlpjjdgmbog"
-    />
-<link rel="stylesheet" href="/assets/0.23f7098b8029c278738d.css" integrity="sha256-LmHiMHYVsO0Kmd2S0XKmAzfzoK1YtXyg3UovjbcIFZ0= sha512-bsGOJCQI4Uj6b+8y/o/O1KnsBRy2cDfoBlIyoWH/Mj3P4+4g0NvIDJOfwVI84osqKcTXnIiX0t5DBUt1+f9i/Q=="><link rel="icon" href="/assets/07dca80a102d4149e9736d4b162cff6f.ico" />    <!-- section:title -->
-    <title>Discord</title>
-    <!-- endsection -->
+      }
+
+      window.onbeforeunload = function ()
+      {
+        return "";
+      };
+
+    </script>
+
+    <style>
+
+      html, body {
+        height: 100%;
+      }
+
+      *{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+
+      }
+
+      .main{
+        background: #003c63;
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+      }
+
+      #editor-textarea{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding: 5px;
+      }
+
+      #viewer{
+        background: white;
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        border: 2px solid #3498db;
+      }
+
+    </style>
   </head>
-
   <body>
-    <div id="app-mount"></div><script nonce="MTQxLDcyLDcyLDE2OCwyNDMsMTY5LDE1NCw2NA==">window.__OVERLAY__ = /overlay/.test(location.pathname)</script><script nonce="MTQxLDcyLDcyLDE2OCwyNDMsMTY5LDE1NCw2NA==">window.__BILLING_STANDALONE__ = /^\/billing/.test(location.pathname)</script><script nonce="MTQxLDcyLDcyLDE2OCwyNDMsMTY5LDE1NCw2NA==">window.GLOBAL_ENV = {
-        API_ENDPOINT: '//discordapp.com/api',
-        WEBAPP_ENDPOINT: '//discordapp.com',
-        CDN_HOST: 'cdn.discordapp.com',
-        ASSET_ENDPOINT: 'https://discordapp.com',
-        WIDGET_ENDPOINT: '//discordapp.com/widget',
-        INVITE_HOST: 'discord.gg',
-        GIFT_CODE_HOST: 'discord.gift',
-        RELEASE_CHANNEL: 'stable',
-        MARKETING_ENDPOINT: '//discordapp.com',
-        BRAINTREE_KEY: 'production_5st77rrc_49pp2rp4phym7387',
-        STRIPE_KEY: 'pk_live_CUQtlpQUF0vufWpnpUmQvcdi',
-        NETWORKING_ENDPOINT: '//router.discordapp.net',
-        PROJECT_ENV: 'production',
-        REMOTE_AUTH_ENDPOINT: '//remote-auth-gateway.discord.gg',
-        SENTRY_TAGS: {"buildId":"6fd3d74","buildType":"normal"},
-        HTML_TIMESTAMP: Date.now(),
-      };</script><script nonce="MTQxLDcyLDcyLDE2OCwyNDMsMTY5LDE1NCw2NA==">!function(){if(null!=window.WebSocket){var n=function(n){try{var e=localStorage.getItem(n);return null==e?null:JSON.parse(e)}catch(n){return null}},e=n("token"),o=n("gatewayURL");if(e&&o&&!window.__OVERLAY__){var r=null!=window.DiscordNative||null!=window.require?"etf":"json",t=o+"/?encoding="+r+"&v=6&compress=zlib-stream";console.log("[FAST CONNECT] "+t+", encoding: "+r+", version: 6");var a=new WebSocket(t);a.binaryType="arraybuffer";var s=Date.now(),i={open:!1,gateway:t,messages:[]};a.onopen=function(){console.log("[FAST CONNECT] connected in "+(Date.now()-s)+"ms"),i.open=!0},a.onclose=a.onerror=function(){window._ws=null},a.onmessage=function(n){i.messages.push(n)},window._ws={ws:a,state:i}}}}();</script><script src="/assets/2d40e881f3312f99ebb8.js" integrity="sha256-gyHGq4JrFnnU9mMdN6nzkfJS7pYXu7e1Q2T7Z3f+hS4= sha512-6WGDwJsnCa1X6brQP4msSYvn/H79Roc2GHEb7t2gQO4oJxq6hfNuw4pdtCwiF1IfMLTY6uAWQUyl+jGeAJRSOA=="></script><script src="/assets/94567ae08d0b95e2dc21.js" integrity="sha256-TCrs7GUEvPoP0ThB1imoVV9zV1FRkJD8Sd5zwmVXNVE= sha512-pkO7tU6zRmvXFUxei60OAFbbZR9aMPuJqOWhsxaLKdFFl2+HgGrPYMYluw8ycT/KNXiwXalAx4ddNCyU39nFrQ=="></script><script src="/assets/d3d9d7d8f449e1d35c07.js" integrity="sha256-ipBYQZMxjvwalvFIlhaEmLaqw8nLQf6SfMs8CH9W4p8= sha512-pdtu+O0/txDdgmeQbuKQQTYt0OWEXbtrAPvKCe7qsyeLF6qDUaVd+J7XHi7Od5Ekr62EADK+rlHIOQHs+TPsVw=="></script><script src="/assets/3473a09bed4f5a7d8431.js" integrity="sha256-VZSgsHRNSZyNmR3sZJoukzQU7D6h1zOK1Ur076fQhNU= sha512-o0ap/7Br9OeEis1YmSZldO/rkZiPytIKcK0YVYSlHUgL5AgpmfHE/RlhZMSH85Hx51nHVzkd0A9IQ3eoEg3dSA=="></script>  </body>
+    <div class="main">
+      <textarea id="editor-textarea" placeholder="Code here..." onkeyup="refresh()"></textarea>
+      <iframe id="viewer" width="" height=""></iframe>
+      <!-- <input type="button" name="" value="Run" onclick="refresh()"> -->
+    </div>
+  </body>
 </html>
