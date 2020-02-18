@@ -9,9 +9,10 @@ Checklist for what needs to be finished
 - Pros and Cons for Electoral College
 - Sitemap page
 - Citations page
+- Electoral College Brief
+
 
 ## Needed
 
-- Electoral College Brief
 - Pros and Cons for NPVIC
 
